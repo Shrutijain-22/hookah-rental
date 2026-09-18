@@ -25,7 +25,18 @@ app.use('/api', hookahRoutes);
 app.use('/api', bookingRoutes);
 app.use('/api', statsRoutes);
 
-// Health check root
+// Root route
+app.get('/', (req, res) => {
+  res.json({
+    status: '🔥 Online',
+    service: 'Velvet Smoke VIP Hookah Rental API',
+    version: '1.0.0',
+    endpoints: ['/api/hookahs', '/api/bookings', '/api/auth'],
+    timestamp: new Date(),
+  });
+});
+
+// Health check
 app.get('/api/health', (req, res) => {
   res.json({
     status: 'online',
