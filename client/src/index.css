@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-obsidian: #07080b;
+    --bg-charcoal: #10121a;
+    --bg-card: rgba(16, 18, 26, 0.75);
+    --gold-primary: #d4af37;
+    --gold-light: #f3e5ab;
+    --amber-glow: #f59e0b;
+  }
+
+  body {
+    background-color: var(--bg-obsidian);
+    color: #e2e8f0;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom Luxury Utilities */
+.glass-panel {
+  background: rgba(16, 18, 26, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-panel-hover:hover {
+  border-color: rgba(212, 175, 55, 0.4);
+  box-shadow: 0 12px 40px 0 rgba(212, 175, 55, 0.12);
+  transform: translateY(-2px);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #fff 0%, #f3e5ab 40%, #d4af37 70%, #b8860b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border-glow {
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.25);
+}
+
+.amber-gradient-btn {
+  background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%);
+  color: #07080b;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.amber-gradient-btn:hover {
+  background: linear-gradient(135deg, #f3e5ab 0%, #d4af37 100%);
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.4);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #07080b;
+}
+::-webkit-scrollbar-thumb {
+  background: #262936;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d4af37;
+}
